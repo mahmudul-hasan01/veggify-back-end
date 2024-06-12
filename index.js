@@ -13,8 +13,10 @@ async function main() {
   await mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@veggify-app.oqfjfma.mongodb.net/?retryWrites=true&w=majority&appName=Veggify-App`);
 
   const itemRoutes = require('./Src/Routes/ItemRoutes')
+  const categoryRoutes = require('./Src/Routes/CategoryRoutes')
 
   app.use('/api', itemRoutes)
+  app.use('/api', categoryRoutes)
 
   app.get('/', (req, res) => {
     res.send('Veggify Recipe App Server')

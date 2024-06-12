@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
 const ingredientSchema = new mongoose.Schema({
     name: String,
@@ -35,5 +34,5 @@ const ItemSchema = new mongoose.Schema({
     },
 });
 
-const Item = mongoose.model("Item", ItemSchema)
-module.exports = Item
+const item = mongoose.model("Items", ItemSchema)
+module.exports = item
